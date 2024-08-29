@@ -11,8 +11,12 @@ body {
 
 :root{
     --bg-color: #ffffff;
+    --bg-color2: #F4F4F9; 
     --text-color: #000000;
+    --text-color2: #333; 
     --main-color: hsl(29, 100%, 50%);
+    --secondary-color: #FFB347; 
+    
 }
 
 body{
@@ -696,4 +700,54 @@ a:hover {
     max-width: 100%;
     width: 560px;
     height: 315px;
+}
+
+/* -------------------- TERMS ---------------------------*/
+
+
+.terms {
+   
+    padding: 50px 10%;
+    color: var(--text-color2);
+     background-color: var(--bg-color2);
+}
+
+.terms section {
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+    margin-top: 70px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.terms h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: x-large;
+    font-family: 'Volkhov', serif;
+
+}
+
+.terms h2 {
+    color: var(--secondary-color);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: 'Volkhov', serif;
+    font-size:larger;
+}
+
+.terms p, .terms ul {
+    margin-bottom: 20px;
+    color: var(--text-color2);
+    line-height: 1.8;
+}
+
+.terms ul {
+    padding-left: 20px;
+}
+
+.terms ul li {
+    margin-bottom: 10px;
 }
