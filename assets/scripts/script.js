@@ -93,39 +93,36 @@ const allCard = Array.from(document.querySelectorAll('.card'));
 
 //Dark Mode
 
-document.addEventListener('DOMContentLoaded', function () {
-    // Dark Mode
-    var icon = document.getElementById('icon');
+var icon = document.getElementById('icon');
 
-    // Verificar si no hay un tema guardado, si no, establecerlo en 'light'
-    if (localStorage.getItem("theme") == null) {
+// Verificar si no hay un tema guardado, si no, establecerlo en 'light'
+if (localStorage.getItem("theme") == null) {
+    localStorage.setItem("theme", "light");
+}
+
+let localData = localStorage.getItem("theme");
+
+// Aplicar el tema guardado
+if (localData == "light") {
+    icon.src = "assets/img/moon.png";
+    document.body.classList.remove("dark-theme");
+} else if (localData == "dark") {
+    icon.src = "assets/img/sun.png";
+    document.body.classList.add("dark-theme");
+}
+
+// Alternar entre temas cuando se hace clic en el icono
+icon.onclick = function() {	
+    document.body.classList.toggle('dark-theme');
+    if (document.body.classList.contains('dark-theme')) {
+        icon.src = 'assets/img/sun.png';
+        localStorage.setItem("theme", "dark");
+    } else {
+        icon.src = 'assets/img/moon.png';
         localStorage.setItem("theme", "light");
     }
+}
 
-    let localData = localStorage.getItem("theme");
-
-    // Aplicar el tema guardado
-    if (localData == "light") {
-        icon.src = "assets/img/moon.png";
-        document.body.classList.remove("dark-theme");
-    } else if (localData == "dark") {
-        icon.src = "assets/img/sun.png";
-        document.body.classList.add("dark-theme");
-    }
-
-    // Cambiar el tema al hacer clic en el icono
-    icon.addEventListener('click', function () {
-        if (document.body.classList.contains("dark-theme")) {
-            document.body.classList.remove("dark-theme");
-            icon.src = "assets/img/moon.png";
-            localStorage.setItem("theme", "light");
-        } else {
-            document.body.classList.add("dark-theme");
-            icon.src = "assets/img/sun.png";
-            localStorage.setItem("theme", "dark");
-        }
-    });
-});
 
 // ------------------Preguntas Frecuentes (FAQ) - Script--------------------------------
 
