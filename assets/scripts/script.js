@@ -126,7 +126,6 @@ icon.onclick = function() {
 
 // ------------------Preguntas Frecuentes (FAQ) - Script--------------------------------
 
-
 document.querySelectorAll('.faq-item h3').forEach(item => {
 	item.addEventListener('click', function() {
 		const answer = this.nextElementSibling;
