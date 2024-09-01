@@ -8,9 +8,9 @@ function idioma(){
 	let id = check.checked;
 
 	if( id === true){
-		window.location.href = "index.html"
-	}else{
 		window.location.href = "index-en.html"
+	}else{
+		window.location.href = "index.html"
 	}
 }
 
