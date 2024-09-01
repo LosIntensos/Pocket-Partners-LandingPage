@@ -1,18 +1,20 @@
 
 //----------------IDIOMA----------------
-const check = document.querySelector(".check");
+var check = document.querySelector(".check");
 check.addEventListener('click',idioma);
 
 function idioma(){
-
 	let id = check.checked;
 
 	if( id === true){
-		window.location.href = "index-en.html"
+		location.href = "index.html"
 	}else{
-		window.location.href = "index.html"
+		location.href = "index-en.html"
 	}
 }
+
+
+
 
 function openNav(){
 	document.getElementById("mobile-menu") .style.width = "100%";
