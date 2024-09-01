@@ -446,6 +446,90 @@ a.discover-button:hover {
     }
 }
 
+/*----------Preguntas Frecuentes FAQ--------------------*/
+
+.faq {
+    max-width: 100%;
+    background: white;
+    padding: 2%;
+    box-shadow: 0 2px 10px rgb(101, 101, 101);
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1%;
+    border-radius: 2%;
+    flex: 1;
+    box-shadow: 0 2px 10px rgb(101, 101, 101);
+}
+
+.faq h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+}
+
+
+.faq-item h3 {
+    cursor: pointer;
+    margin: 2%;
+    padding: 10px;
+    background: #f89125;
+    color: white;
+    border-radius: 5px;
+}
+
+.faq-item .answer {
+    display: none;
+    margin: 10px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+
+.answer ul {
+
+    padding-left: 40px;
+}
+
+.hidden .answer {
+    display: none;
+}
+
+button#toggle-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #FF8601;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+button#toggle-btn:hover {
+    background: #FF8601;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .faq {
+        padding: 15px;
+    }
+
+    button#toggle-btn {
+        font-size: 14px;
+    }
+}
+
+
+
 
 /*----------Footer--------------------*/
 

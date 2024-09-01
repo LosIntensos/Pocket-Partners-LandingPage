@@ -122,3 +122,15 @@ icon.onclick = function() {
         localStorage.setItem("theme", "light");
     }
 }
+
+
+// ------------------Preguntas Frecuentes (FAQ) - Script--------------------------------
+
+
+document.querySelectorAll('.faq-item h3').forEach(item => {
+	item.addEventListener('click', function() {
+		const answer = this.nextElementSibling;
+		answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+	});
+});
+
