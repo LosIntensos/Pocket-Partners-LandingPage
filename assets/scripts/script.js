@@ -1,3 +1,28 @@
+
+//----------------IDIOMA----------------
+const check = document.querySelector(".check");
+check.addEventListener('click',idioma);
+
+function idioma(){
+
+	let id = check.checked;
+
+	if( id === true){
+		window.location.href = "index.html"
+	}else{
+		window.location.href = "index-en.html"
+	}
+}
+
+function openNav(){
+	document.getElementById("mobile-menu") .style.width = "100%";
+}
+
+function closeNav(){
+	document.getElementById("mobile-menu") .style.width = "0%";
+}
+
+
 let menu = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 let sectionBtns = document.querySelectorAll('.btn-nav');
@@ -103,10 +128,10 @@ if (localStorage.getItem("theme") == null) {
 let localData = localStorage.getItem("theme");
 
 // Aplicar el tema guardado
-if (localData == "light") {
+if (localData === "light") {
     icon.src = "assets/img/moon.png";
     document.body.classList.remove("dark-theme");
-} else if (localData == "dark") {
+} else if (localData === "dark") {
     icon.src = "assets/img/sun.png";
     document.body.classList.add("dark-theme");
 }
